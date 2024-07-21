@@ -11,7 +11,7 @@ import { revalidatePath } from "next/cache";
 export async function addImageAction(fd: FormData, revalidatePathURL: string) {
   const file = fd.get("file") as File;
   const res = await fetch(
-    `http://localhost:3001/api/avatar/upload?filename=${file.name}`,
+    `https://upload-image-s.vercel.app/api/avatar/upload?filename=${file.name}`,
     {
       method: "POST",
       body: file,
