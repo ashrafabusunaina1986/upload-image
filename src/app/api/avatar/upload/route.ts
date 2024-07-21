@@ -10,8 +10,8 @@ export async function POST(req: Request): Promise<NextResponse> {
     access: "public",
   });
 
-  db();
-  await Images.create({ filename: blob.pathname, url: blob.url });
+  // db();
+  // await Images.create({ filename: blob.pathname, url: blob.url });
   return NextResponse.json(blob);
 }
 export const GET = async (req: Request) => {
