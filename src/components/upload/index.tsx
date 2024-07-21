@@ -18,9 +18,10 @@ function Upload() {
     }
   };
   const handlesubmitUpload = async (formData: FormData) => {
-    const file = formData.get("file") as File;
-    if (file) {
+    if (selectFile) {
       await addImageAction(formData, "/");
+       setSelectImage('');
+      setSelectFile(null);
     }
   };
 
